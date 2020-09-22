@@ -9,6 +9,38 @@ let cajas1= document.getElementById('caja').getElementsByClassName("cajita")
  
 let calculadora = document.getElementById("caja")
 
+if (!localStorage.getItem("tema")){
+  localStorage.setItem("tema","white")
+}
+else{
+  const tema = localStorage.getItem("tema")
+  if(tema=="retro"){
+    fondo.classList.add("bg-warning")
+    fondo.classList.remove("bg-white")
+    fondo.classList.remove("bg-dark")
+    for(let i=0; i <cajas1.length; i++){
+      cajas1[i].classList.add("bg-info")
+      cajas1[i].classList.remove("bg-dark")
+      cajas1[i].classList.remove("bg-white")
+    }
+    retro.checked=true
+    localStorage.setItem("tema","retro")
+  }else if(tema=="dark"){
+    fondo.classList.add("bg-warning")
+    fondo.classList.remove("bg-white")
+    fondo.classList.add("bg-dark")
+    for(let i=0; i <cajas1.length; i++){
+      cajas1[i].classList.remove("bg-info")
+      cajas1[i].classList.remove("bg-dark")
+      cajas1[i].classList.add("bg-white")
+    }
+    oscuro.checked = true
+    localStorage.setItem("tema","dark")
+  }
+}
+
+
+
 caja.addEventListener("click",(e)=>{
   let temp = e.target.innerText;
   if (temp== "RES"){
@@ -134,6 +166,7 @@ const temaR = ()=>{
       cajas1[i].classList.remove("bg-white")
     }
     oscuro.checked=false
+    localStorage.setItem("tema","retro")
   } else {
     fondo.classList.remove("bg-warning")
     fondo.classList.add("bg-white")
@@ -143,6 +176,7 @@ const temaR = ()=>{
       cajas1[i].classList.remove("bg-info")
       cajas1[i].classList.remove("bg-white")
     }
+    localStorage.setItem("tema","white")
   }
 }
 
@@ -158,6 +192,7 @@ const temaO = ()=>{
       cajas1[i].classList.add("bg-white")
     }
     retro.checked = false
+    localStorage.setItem("tema","dark")
   } else {
     fondo.classList.remove("bg-warning")
     fondo.classList.add("bg-white")
@@ -167,5 +202,6 @@ const temaO = ()=>{
       cajas1[i].classList.remove("bg-info")
       cajas1[i].classList.remove("bg-white")
     }
+    localStorage.setItem("tema","white")
   }
 }
