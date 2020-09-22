@@ -2,8 +2,13 @@ let nums= false
 
 let teclado = document.getElementById("teclado")
 let titulo = document.getElementById("titulo")
+let retro = document.getElementById("customSwitch1")
+let oscuro = document.getElementById("customSwitch2")
+let fondo = document.body;
+let cajas1= document.getElementById('caja').getElementsByClassName("cajita")
  
 let calculadora = document.getElementById("caja")
+
 caja.addEventListener("click",(e)=>{
   let temp = e.target.innerText;
   if (temp== "RES"){
@@ -116,3 +121,51 @@ caja.addEventListener("click",(e)=>{
     }
   }
 })
+
+const temaR = ()=>{
+
+  if (retro.checked == true){
+    fondo.classList.add("bg-warning")
+    fondo.classList.remove("bg-white")
+    fondo.classList.remove("bg-dark")
+    for(let i=0; i <cajas1.length; i++){
+      cajas1[i].classList.add("bg-info")
+      cajas1[i].classList.remove("bg-dark")
+      cajas1[i].classList.remove("bg-white")
+    }
+    oscuro.checked=false
+  } else {
+    fondo.classList.remove("bg-warning")
+    fondo.classList.add("bg-white")
+    fondo.classList.remove("bg-dark")
+    for(let i=0; i <cajas1.length; i++){
+      cajas1[i].classList.add("bg-dark")
+      cajas1[i].classList.remove("bg-info")
+      cajas1[i].classList.remove("bg-white")
+    }
+  }
+}
+
+const temaO = ()=>{
+
+  if (oscuro.checked == true){
+    fondo.classList.add("bg-warning")
+    fondo.classList.remove("bg-white")
+    fondo.classList.add("bg-dark")
+    for(let i=0; i <cajas1.length; i++){
+      cajas1[i].classList.remove("bg-info")
+      cajas1[i].classList.remove("bg-dark")
+      cajas1[i].classList.add("bg-white")
+    }
+    retro.checked = false
+  } else {
+    fondo.classList.remove("bg-warning")
+    fondo.classList.add("bg-white")
+    fondo.classList.remove("bg-dark")
+    for(let i=0; i <cajas1.length; i++){
+      cajas1[i].classList.add("bg-dark")
+      cajas1[i].classList.remove("bg-info")
+      cajas1[i].classList.remove("bg-white")
+    }
+  }
+}

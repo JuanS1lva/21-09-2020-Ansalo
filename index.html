@@ -10,7 +10,7 @@
 </head>
 <body>
   
-  <div class="caja container">
+  <div class="caja container" id="contenedor">
     <div class="row d-flex justify-content-center">
       <h1 id="titulo">Reto Ansalo (Nivel I: Letras)</h1>
     </div>
@@ -18,42 +18,38 @@
       <h1 id="teclado"></h1>
     </div>
     <div class="row d-flex justify-content-center">
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        <label class="form-check-label" for="exampleRadios1">
-          Tema Retro
-        </label>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="temaR()">
+        <label class="custom-control-label" for="customSwitch1">Tema Retro</label>
       </div>
-      <div class="pl-5 pr-5">
+      <div class="pl-3 pr-3">
         <span> | </span>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-          Tema Oscuro
-        </label>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch2" onclick="temaO()">
+        <label class="custom-control-label" for="customSwitch2">Tema Oscuro</label>
       </div>
     </div>
     <div id="caja">
       <div class="row d-flex justify-content-center caja">
-        <div class="cajita p-5 m-2" id="cajita1">A-1</div>
-        <div class="cajita p-5 m-2" id="cajita2">B-2</div>
-        <div class="cajita p-5 m-2" id="cajita3">C-3</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita1">A-1</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita2">B-2</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita3">C-3</div>
       </div>
       <div class="row d-flex justify-content-center">
-        <div class="cajita p-5 m-2" id="cajita1">D-4</div>
-        <div class="cajita p-5 m-2" id="cajita2">E-5</div>
-        <div class="cajita p-5 m-2" id="cajita3">F-6</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita1">D-4</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita2">E-5</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita3">F-6</div>
       </div>
       <div class="row d-flex justify-content-center">
-        <div class="cajita p-5 m-2" id="cajita1">G-7</div>
-        <div class="cajita p-5 m-2" id="cajita2">H-8</div>
-        <div class="cajita p-5 m-2" id="cajita3">I-9</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita1">G-7</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita2">H-8</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita3">I-9</div>
       </div>
       <div class="row d-flex justify-content-center">
-        <div class="cajita p-5 m-2" id="cajita1">CAL</div>
-        <div class="cajita p-5 m-2" id="cajita2">J-0</div>
-        <div class="cajita p-5 m-2" id="cajita3">RES</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita1">CAL</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita2">J-0</div>
+        <div class="cajita p-5 m-2 bg-dark" id="cajita3">RES</div>
       </div>
     </div>
   </div>
