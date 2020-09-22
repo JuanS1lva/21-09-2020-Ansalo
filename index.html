@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <title>Calculadora</title>
+</head>
+<body>
+  
+  <div class="caja container">
+    <div class="row d-flex justify-content-center">
+      <h1 id="titulo">Reto Ansalo (Nivel I: Letras)</h1>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <h1 id="teclado"></h1>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Tema Retro
+        </label>
+      </div>
+      <div class="pl-5 pr-5">
+        <span> | </span>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+          Tema Oscuro
+        </label>
+      </div>
+    </div>
+    <div id="caja">
+      <div class="row d-flex justify-content-center caja">
+        <div class="cajita p-5 m-2" id="cajita1">A-1</div>
+        <div class="cajita p-5 m-2" id="cajita2">B-2</div>
+        <div class="cajita p-5 m-2" id="cajita3">C-3</div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="cajita p-5 m-2" id="cajita1">D-4</div>
+        <div class="cajita p-5 m-2" id="cajita2">E-5</div>
+        <div class="cajita p-5 m-2" id="cajita3">F-6</div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="cajita p-5 m-2" id="cajita1">G-7</div>
+        <div class="cajita p-5 m-2" id="cajita2">H-8</div>
+        <div class="cajita p-5 m-2" id="cajita3">I-9</div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="cajita p-5 m-2" id="cajita1">CAL</div>
+        <div class="cajita p-5 m-2" id="cajita2">J-0</div>
+        <div class="cajita p-5 m-2" id="cajita3">RES</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="./scripts/script.js"></script>
+</body>
+</html>
